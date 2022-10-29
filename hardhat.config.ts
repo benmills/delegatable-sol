@@ -8,6 +8,7 @@ import "hardhat-abi-exporter";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
 import "hardhat-gas-reporter";
+import "hardhat-docgen";
 import "solidity-coverage";
 import { HardhatUserConfig } from "hardhat/config";
 import networks from "./hardhat.network";
@@ -68,6 +69,11 @@ const config: HardhatUserConfig = {
       },
       evmVersion: "istanbul",
     },
+  },
+  docgen: {
+    path: "./docs",
+    clear: true,
+    runOnCompile: true,
   },
 };
 
